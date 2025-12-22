@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X, CheckCircle } from 'lucide-react';
-import { supabase } from '../lib/supabase';
+// import { supabase } from '../lib/supabase';
 import SuccessModal from './SuccessModal';
 
 interface EntryFormModalProps {
@@ -39,7 +39,9 @@ export default function EntryFormModal({ poNumber, onClose }: EntryFormModalProp
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = async () => {
+  // for testing the create functionality only 
+  
+ /* const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
       const { data: seqData } = await supabase.rpc('nextval', { sequence_name: 'entry_number_seq' });
@@ -70,12 +72,13 @@ export default function EntryFormModal({ poNumber, onClose }: EntryFormModalProp
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }; */ 
 
   if (showSuccess) {
     return <SuccessModal onClose={onClose} />;
   }
-
+ 
+  
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
       <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full my-8">
