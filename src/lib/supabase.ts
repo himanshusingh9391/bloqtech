@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+/* import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -25,3 +25,4 @@ export interface InwardGateEntry {
   created_by: string | null;
   created_at: string;
 }
+*/
